@@ -44,7 +44,7 @@ default,
 [message citation](https://www.gnu.org/software/emacs/manual/html_node/message/Insertion-Variables.html) will
 default to top-posting. You can customize this as well.
 
-    (setq notmuch/message-cite-reply-positions 'above)
+    (setq notmuch/message-cite-reply-position 'above)
     
 Lastly, you need to setup your identities
 with [Gnus Alias](https://notmuchmail.org/emacstips/#index16h2). You can add as
