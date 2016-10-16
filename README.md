@@ -13,16 +13,16 @@ pretty straightforward, more information can be found on the Notmuch website.
   
 Personally, I
 use [mbsync (from the isync project)](http://isync.sourceforge.net) to maintain
-a local copy of my mail in Maildir format. After mbsync fininshed downloading my
-mail, I run notmuch to add it to the index. The []Arch Linux
-wiki](https://wiki.archlinux.org/index.php/Isync) has a pretty good article on
-getting this setup.
+a local copy of my mail in Maildir format. After mbsync finishes downloading my
+mail, I run notmuch to add it to the index.
+The [Arch Linux wiki](https://wiki.archlinux.org/index.php/Isync) has a pretty
+good article on getting this setup.
 
 ## Installing the Layer
 
 To install the layer, checkout this project into your "private" layers folder in
 `~/.emacs.d/private`. Next, open up your `~/.spacemacs` file and add `notmuch`
-to your `dotspacemasc-configuration-layers`.
+to your `dotspacemacs-configuration-layers`.
 
 ## Configuring the Layers
 
@@ -30,7 +30,7 @@ If you installed a tool to lookup addresses from notmuch
 (like [this one](https://github.com/aperezdc/notmuch-addrlookup-c)), you can
 tell the layer where to find the binary.
 
-    (setq notmuch/address-lookup-bin "/usr/bin/notmuch-addrlookup)
+    (setq notmuch/address-lookup-bin "/usr/bin/notmuch-addrlookup"")
     
 By default, the layer will set the notmuch list of messages to use colors that
 match the dark Spacemacs theme (normally they are blue). If you use another
@@ -76,20 +76,20 @@ To start the notmuch interface...
 
 
 | Key Binding | Description     |
-|-------------+-----------------|
-| ~SPC a n~   | Notmuch Hello   |
+|-------------|-----------------|
+| `SPC a n`   | Notmuch Hello   |
 
 When you area viewing a list of messages...
 
 | Key Binding | Description                              |
-|-------------+------------------------------------------|
-| ~d~         | Delete message at point                  |
-| ~a~         | Archive message at point                 |
-| ~C-c r~     | Tag receipt and archive message at point |
+|-------------|------------------------------------------|
+| `d`         | Delete message at point                  |
+| `a`         | Archive message at point                 |
+| `C-c r`     | Tag receipt and archive message at point |
 
 When reading messages...
 
 | Key Binding | Description                              |
-|-------------+------------------------------------------|
-| ~C- i~      | Select identity                          |
+|-------------|------------------------------------------|
+| `C-c i`     | Select identity                          |
 
