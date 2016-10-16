@@ -6,6 +6,22 @@
 ;;
 ;;; License: GPLv3
 
-(when (configuration-layer/package-usedp 'notmuch)
+(defun notmuch/message-delete ()
+  (interactive)
+  (notmuch-search-tag '("+deleted" "-inbox" "-unread"))
+  (notmuch-search-next-thread))
 
-  )
+(defun notmuch/message-receipt-archive ()
+  (interactive)
+  (notmuch-search-tag '("+archived" "+receipt" "-unread" "-inbox"))
+  (notmuch-search-next-thread))
+
+(defun notmuch/message-archive ()
+  (interactive)
+  (notmuch-search-tag '("+archived" "-inbox" "-unread"))
+  (notmuch-search-next-thread))
+
+(defun notmuch/select-identity ()
+  (interactive)
+  (gnus-alias-select-identity))
+
