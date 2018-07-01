@@ -22,7 +22,8 @@ good article on getting this setup.
 
 To install the layer, checkout this project into your "private" layers folder in
 `~/.emacs.d/private`. Next, open up your `~/.spacemacs` file and add `notmuch`
-to your `dotspacemacs-configuration-layers`.
+to your `dotspacemacs-configuration-layers`. You may have to rename the directory 
+from `spacemacs-notmuch-layer` to `notmuch`.
 
 ## Configuring the Layers
 
