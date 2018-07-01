@@ -21,7 +21,7 @@ getting this setup.
 ## Installing the Layer
 
 To install the layer, checkout this project into your "private" layers folder in
-`~/.emacs.d/private` as `notmuc`.
+`~/.emacs.d/private` as `notmuch`.
 
     git clone https://github.com/cmiles74/spacemacs-notmuch-layer.git ~/.emacs.d/private/notmuch
 
