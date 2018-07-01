@@ -98,3 +98,20 @@ When reading messages...
 |-------------|------------------------------------------|
 | `C-c i`     | Select identity                          |
 
+# Troubleshooting
+
+## SPACE Key Bound to Scroll Page Down Action
+
+The notmuch modes (`notmuch-search`, `notmuch-show`, etc.) bind the scroll page
+down action to the space key by default. This could cause problems if you've
+bound the space key globally to something else. If you'd like to free up the
+space key, rebind the page-down action.
+
+    (progn 
+      (require 'notmuch) 
+      (define-key notmuch-search-mode-map " " spacemacs-cmds)
+      (define-key notmuch-show-mode-map " " spacemacs-cmds))
+    
+A thank you goes goes out to [jernejkase](https://github.com/jernejkase) for
+pointing this out.
+
