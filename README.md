@@ -11,19 +11,23 @@ pretty straightforward, more information can be found on the Notmuch website.
 
   https://notmuchmail.org
   
-Personally, I
-use [mbsync (from the isync project)](http://isync.sourceforge.net) to maintain
-a local copy of my mail in Maildir format. After mbsync finishes downloading my
-mail, I run notmuch to add it to the index.
-The [Arch Linux wiki](https://wiki.archlinux.org/index.php/Isync) has a pretty
-good article on getting this setup.
+Personally, I use [mbsync (from the isync
+project)](http://isync.sourceforge.net) to maintain a local copy of my mail in
+Maildir format. After mbsync finishes downloading my mail, I run notmuch to add
+it to the index. The [Arch Linux
+wiki](https://wiki.archlinux.org/index.php/Isync) has a pretty good article on
+getting this setup.
 
 ## Installing the Layer
 
 To install the layer, checkout this project into your "private" layers folder in
-`~/.emacs.d/private`. Next, open up your `~/.spacemacs` file and add `notmuch`
-to your `dotspacemacs-configuration-layers`. You may have to rename the directory 
-from `spacemacs-notmuch-layer` to `notmuch`.
+`~/.emacs.d/private` as `notmuc`.
+
+    git clone https://github.com/cmiles74/spacemacs-notmuch-layer.git ~/.emacs.d/private/notmuch
+
+Next, open up your `~/.spacemacs` file and add `notmuch` to your
+`dotspacemacs-configuration-layers`. You may have to rename the directory from
+`spacemacs-notmuch-layer` to `notmuch`.
 
 ## Configuring the Layers
 
