@@ -98,7 +98,7 @@ When reading messages...
 |-------------|------------------------------------------|
 | `C-c i`     | Select identity                          |
 
-# Troubleshooting
+# Miscellaneous
 
 ## SPACE Key Bound to Scroll Page Down Action
 
@@ -115,3 +115,23 @@ space key, rebind the page-down action.
 A thank you goes goes out to [jernejkase](https://github.com/jernejkase) for
 pointing this out.
 
+## Custom Actions
+
+Inevitable you'll want to add your own keybindings to tag messages the way you
+would like them to be tagged. I recommend adding code to your
+`dotspacemacs/user-init` function in your `~/.spacemacs` file. Here's a handy
+example:
+
+    (defun notmuch/message-crazytalk ()
+      (interactive)
+      (notmuch-search-tag '("+wackadoodle" "-inbox" "-unread"))
+      (notmuch-search-next-thread))
+
+    (add-hook 'notmuch-search-mode-hook
+              (lambda()
+                (local-set-key (kbd "c") 'notmuch/message-crazytalk)
+                (which-key-add-key-based-replacements
+                  "c" "Tag message as crazy talk")))
+
+The code above will tag a message as "wackadoodle" when you have it highlighted
+in your inbox and press the `c` key.
