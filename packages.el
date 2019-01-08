@@ -103,9 +103,8 @@
                   (setq message-cite-reply-position notmuch/message-cite-reply-position))
               )))
 
-(defun notmuch/init-org ()
+(defun notmuch/post-init-org ()
   (use-package org
     :config (progn
-              (add-hook 'message-mode-hook 'turn-on-orgstruct)
-              (add-hook 'message-mode-hook 'turn-on-orgstruct++)
+              ;;(add-hook 'message-mode-hook 'turn-on-orgstruct)
               (add-hook 'message-mode-hook 'turn-on-orgtbl))))
